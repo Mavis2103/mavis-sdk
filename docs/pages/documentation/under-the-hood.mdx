@@ -1,17 +1,17 @@
 import { Callout } from "nextra/components";
 
-# Under The Hood: How Evolution Works
+# Under The Hood: How Mavis Works
 
-## Fundamentals 
+## Fundamentals
 
-Evolution library simplifies the process of building, signing, and submitting Cardano transactions. This document explains the key components and processes that happen "under the hood".
+Mavis library simplifies the process of building, signing, and submitting Cardano transactions. This document explains the key components and processes that happen "under the hood".
 
-| Component                 | Description                                                                                                                                                                                                                                                                                                   |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Inputs**                | Existing UTxOs from your wallet that the transaction will consume. Evolution library automatically selects these to cover your output amounts plus transaction fees. Don't forget that each UTxO can only be spent once.                                                                                      |
-| **Outputs**               | Define the new UTxOs that your transaction will create. Each output must contain a minimum amount of ADA, which is determined by the current protocol parameters.                                                                                                                                             |
-| **Fees**                  | Calculated automatically based on your transaction's size and any execution units used (for smart contracts). Evolution library handles this calculation for you, and fees are _-for now-_ always (looking at you [babel fees](https://iohk.io/en/blog/posts/2021/02/25/babel-fees/)) paid in ADA (lovelace). |
-| **Transaction Witnesses** | Cryptographic signatures that prove you own the input UTxOs. These are added when you sign the transaction, either with your wallet or a private key.                                                                                                                                                         |
+| Component                 | Description                                                                                                                                                                                                                                                                                               |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Inputs**                | Existing UTxOs from your wallet that the transaction will consume. Mavis library automatically selects these to cover your output amounts plus transaction fees. Don't forget that each UTxO can only be spent once.                                                                                      |
+| **Outputs**               | Define the new UTxOs that your transaction will create. Each output must contain a minimum amount of ADA, which is determined by the current protocol parameters.                                                                                                                                         |
+| **Fees**                  | Calculated automatically based on your transaction's size and any execution units used (for smart contracts). Mavis library handles this calculation for you, and fees are _-for now-_ always (looking at you [babel fees](https://iohk.io/en/blog/posts/2021/02/25/babel-fees/)) paid in ADA (lovelace). |
+| **Transaction Witnesses** | Cryptographic signatures that prove you own the input UTxOs. These are added when you sign the transaction, either with your wallet or a private key.                                                                                                                                                     |
 
 <Callout type="info">
   `lovelace` is the smallest unit of ADA (1 Ada = 1,000,000 lovelace)
@@ -32,7 +32,7 @@ Minimum Ada requirement acts as "rent" for blockchain storage, ensuring UTxOs co
 
 ### Coin Selection Algorithm
 
-When `.complete()` is called, Evolution library internally queries available UTxOs in your wallet and selects "optimal" UTxOs to cover certain criteria for successful transaction building.
+When `.complete()` is called, Mavis library internally queries available UTxOs in your wallet and selects "optimal" UTxOs to cover certain criteria for successful transaction building.
 
 To be more specific, let's look at a basic case where you have these UTxOs in your wallet:
 
@@ -93,9 +93,9 @@ const finalTx = await lucid
 
 CML (Cardano Multiplatform Library) provides low-level primitives for Cardano blockchain interactions, and Mavis SDK heavily leverages CML for various core functionality.
 
-- **Fee Estimation**: Evolution uses CML for base fee calculation, while handling specific cases like script execution fees (via local UPLC or providers) and reference script fees internally.
+- **Fee Estimation**: Mavis uses CML for base fee calculation, while handling specific cases like script execution fees (via local UPLC or providers) and reference script fees internally.
 
-- **Key Management**: For operations like deriving addresses from private keys, Evolution provides high-level APIs (like `makeWalletFromPrivateKey`), but you can also use CML directly for more granular control:
+- **Key Management**: For operations like deriving addresses from private keys, Mavis provides high-level APIs (like `makeWalletFromPrivateKey`), but you can also use CML directly for more granular control:
 
 ```typescript
 const pubKeyHash = CML.PrivateKey.from_bech32(privateKey)
@@ -105,9 +105,9 @@ const pubKeyHash = CML.PrivateKey.from_bech32(privateKey)
 ```
 
 <Callout type="info">
-  While Evolution abstracts most CML complexity, understanding that CML powers
-  the core operations can help when you need fine-grained control or are
-  debugging transaction issues.
+  While Mavis abstracts most CML complexity, understanding that CML powers the
+  core operations can help when you need fine-grained control or are debugging
+  transaction issues.
 </Callout>
 
 ### Noble Hashes

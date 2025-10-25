@@ -11,17 +11,17 @@ import { Lucid, Koios } from "@mavis-sdk/lucid";
 
 const lucid = await Lucid(
   new Koios("https://preprod.koios.rest/api/v1"),
-  "Preprod"
+  "Preprod",
 );
 ```
 
 <Callout type="info">
   **If you have a bearer token**
 
-  ```typescript
+```typescript
 const lucid = await Lucid(
   new Koios("<koios-api-url>", "<koios-bearer-token>"),
-  "Preprod"
+  "Preprod",
 );
 ```
 

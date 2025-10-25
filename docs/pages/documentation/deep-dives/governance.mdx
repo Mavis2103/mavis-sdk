@@ -20,6 +20,7 @@ As an ADA holder, you can participate in on-chain governance by delegating your 
 <Tabs.Tab>
 
 #### Delegate Voting Power
+
 You can delegate your voting power to a trusted Delegated Representative (DRep). If you have a DRep ID (starts with `drep1...`), convert it to a Credential:
 
 ```typescript
@@ -65,6 +66,7 @@ await lucid
   .delegate.VoteToPoolAndDrep(rewardAddress, poolId, drepCredential)
   .complete();
 ```
+
 </Callout>
 </Tabs.Tab>
 
@@ -192,7 +194,7 @@ await lucid.newTx()
 
 <details>
 <summary>Understanding Delegation Certificates</summary>
-When you delegate your voting power, Evolution library creates a certificate
+When you delegate your voting power, Mavis library creates a certificate
 that's included in your transaction. Behind the scenes, this is handled by the
 `Certificate.new_vote_deleg_cert` method in CML. The certificate contains:
 

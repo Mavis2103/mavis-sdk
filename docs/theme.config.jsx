@@ -34,7 +34,7 @@ export default {
   },
 
   search: {
-    placeholder: '🔎 Explore the Evolution'
+    placeholder: '🔎 Explore the Mavis'
   },
 
   toc: {
