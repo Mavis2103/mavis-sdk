@@ -15,7 +15,7 @@ It can be [Blockfrost](https://blockfrost.io), [Koios](https://koios.rest), [Mae
 For example, with Blockfrost provider:
 
 ```typescript
-import { Blockfrost, Provider } from "@lucid-evolution/lucid";
+import { Blockfrost, Provider } from "@mavis-sdk/lucid";
 
 /**
  * The endpoint based on the Cardano network,
@@ -43,7 +43,7 @@ Other providers follow a similar pattern.
 ### Create CIP-30 Wallet
 
 ```typescript
-import { makeWalletFromAddress } from "@lucid-evolution/lucid";
+import { makeWalletFromAddress } from "@mavis-sdk/lucid";
 
 const provider = blockfrost;
 const network: Network = "Mainnet"; // "Mainnet" | "Preview" | "Preprod" | "Custom"

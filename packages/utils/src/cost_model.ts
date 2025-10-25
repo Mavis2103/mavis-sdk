@@ -1,5 +1,5 @@
 import { CML } from "./core.js";
-import { CostModels, ProtocolParameters } from "@lucid-evolution/core-types";
+import { CostModels, ProtocolParameters } from "@mavis-sdk/core-types";
 
 type Cost = Record<number, number[] | null>;
 

@@ -1,8 +1,8 @@
 import { Effect, pipe } from "effect";
 import { HelloContract, User } from "./services.js";
-import { Constr, Data } from "@lucid-evolution/plutus";
-import { getAddressDetails } from "@lucid-evolution/utils";
-import { fromText } from "@lucid-evolution/core-utils";
+import { Constr, Data } from "@mavis-sdk/plutus";
+import { getAddressDetails } from "@mavis-sdk/utils";
+import { fromText } from "@mavis-sdk/core-utils";
 import { handleSignSubmit, withLogRetry } from "./utils.js";
 
 const DatumSchema = Data.Object({

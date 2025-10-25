@@ -1,9 +1,9 @@
 import { Effect } from "effect";
 import { User } from "../service/EmulatorUser.js";
-import { getAddressDetails } from "@lucid-evolution/utils";
+import { getAddressDetails } from "@mavis-sdk/utils";
 import { HelloContract } from "../../specs/services.js";
-import { Constr, Data } from "@lucid-evolution/plutus";
-import { fromText } from "@lucid-evolution/core-utils";
+import { Constr, Data } from "@mavis-sdk/plutus";
+import { fromText } from "@mavis-sdk/core-utils";
 
 export const depositFunds = Effect.gen(function* () {
   const { user } = yield* User;

@@ -5,10 +5,10 @@ import {
   withLogRetry,
 } from "./utils.js";
 import { HelloContract, User } from "./services.js";
-import { getAddressDetails } from "@lucid-evolution/utils";
-import { Constr, Data } from "@lucid-evolution/plutus";
-import { fromText } from "@lucid-evolution/core-utils";
-import { PaymentKeyHash, UTxO } from "@lucid-evolution/core-types";
+import { getAddressDetails } from "@mavis-sdk/utils";
+import { Constr, Data } from "@mavis-sdk/plutus";
+import { fromText } from "@mavis-sdk/core-utils";
+import { PaymentKeyHash, UTxO } from "@mavis-sdk/core-types";
 import { LucidEvolution } from "../../src/lucid-evolution/index.js";
 import {
   RunTimeError,

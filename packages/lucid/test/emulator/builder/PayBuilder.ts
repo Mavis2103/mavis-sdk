@@ -5,9 +5,9 @@ import {
   mintingPolicyToId,
   toUnit,
   validatorToAddress,
-} from "@lucid-evolution/utils";
-import { Script } from "@lucid-evolution/core-types";
-import { Constr, Data } from "@lucid-evolution/plutus";
+} from "@mavis-sdk/utils";
+import { Script } from "@mavis-sdk/core-types";
+import { Constr, Data } from "@mavis-sdk/plutus";
 import { HelloContract } from "../../specs/services.js";
 
 export const composeWithDatumHashAndInlineDatum = (config: {

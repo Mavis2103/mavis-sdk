@@ -1,11 +1,11 @@
 import { Effect, pipe } from "effect";
-import { Data } from "@lucid-evolution/plutus";
-import { utxoToCore } from "@lucid-evolution/utils";
-import { Redeemer, RedeemerBuilder, UTxO } from "@lucid-evolution/core-types";
+import { Data } from "@mavis-sdk/plutus";
+import { utxoToCore } from "@mavis-sdk/utils";
+import { Redeemer, RedeemerBuilder, UTxO } from "@mavis-sdk/core-types";
 import { ERROR_MESSAGE, TxBuilderError } from "../../Errors.js";
 import * as CML from "@anastasia-labs/cardano-multiplatform-lib-nodejs";
 import { resolveDatum, toPartial, toV1, toV2, toV3 } from "./TxUtils.js";
-import { paymentCredentialOf } from "@lucid-evolution/utils";
+import { paymentCredentialOf } from "@mavis-sdk/utils";
 import { datumOf } from "../../lucid-evolution/utils.js";
 import { TxConfig } from "./Service.js";
 

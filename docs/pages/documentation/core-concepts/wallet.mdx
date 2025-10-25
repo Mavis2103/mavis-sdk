@@ -8,7 +8,7 @@ You can instantiate a wallet object from seed without binding it with a Lucid ob
 ### Generate Seed Phrase
 
 ```typescript
-import { generateSeedPhrase } from "@lucid-evolution/lucid";
+import { generateSeedPhrase } from "@mavis-sdk/lucid";
  
 const seedPhrase = generateSeedPhrase(); // BIP-39
 console.log(seedPhrase);
@@ -17,7 +17,7 @@ console.log(seedPhrase);
 ### Create Wallet
 
 ```typescript
-import { walletFromSeed } from "@lucid-evolution/lucid";
+import { walletFromSeed } from "@mavis-sdk/lucid";
 
 const seedPhrase = "your seed phrase here ...";
 const wallet = walletFromSeed(seedPhrase);
@@ -31,7 +31,7 @@ console.log(wallet); // { address, rewardAddress, paymentKey, stakeKey }
 There is also a utility function associated with the wallet module to discover which key hashes are used from a transaction object limited to the specified UTXOs.
 
 ```typescript
-import { discoverOwnUsedTxKeyHashes } from "@lucid-evolution/lucid";
+import { discoverOwnUsedTxKeyHashes } from "@mavis-sdk/lucid";
 
 const tx: TxSignBuilder = await lucid
   .newTx()

@@ -1,6 +1,6 @@
-import { Json, Provider, UTxO, Unit } from "@lucid-evolution/core-types";
-import { fromUnit, toUnit } from "@lucid-evolution/utils";
-import { Constr, Data } from "@lucid-evolution/plutus";
+import { Json, Provider, UTxO, Unit } from "@mavis-sdk/core-types";
+import { fromUnit, toUnit } from "@mavis-sdk/utils";
+import { Constr, Data } from "@mavis-sdk/plutus";
 
 export const datumOf = async <T = Data>(
   provider: Provider,

@@ -1,5 +1,5 @@
-import { getAddressDetails } from "@lucid-evolution/utils";
-import { fromHex } from "@lucid-evolution/core-utils";
+import { getAddressDetails } from "@mavis-sdk/utils";
+import { fromHex } from "@mavis-sdk/core-utils";
 import {
   Address,
   KeyHash,
@@ -7,7 +7,7 @@ import {
   PrivateKey,
   RewardAddress,
   UTxO,
-} from "@lucid-evolution/core-types";
+} from "@mavis-sdk/core-types";
 import { CML } from "./core.js";
 import { mnemonicToEntropy } from "bip39";
 

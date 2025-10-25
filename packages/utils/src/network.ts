@@ -1,4 +1,4 @@
-import { Network } from "@lucid-evolution/core-types";
+import { Network } from "@mavis-sdk/core-types";
 
 export function networkToId(network: Network): number {
   switch (network) {

@@ -15,8 +15,8 @@ import {
   TxHash,
   Unit,
   UTxO,
-} from "@lucid-evolution/core-types";
-import { applyDoubleCborEncoding, fromUnit } from "@lucid-evolution/utils";
+} from "@mavis-sdk/core-types";
+import { applyDoubleCborEncoding, fromUnit } from "@mavis-sdk/utils";
 import { Schema as S } from "effect";
 import { Effect, pipe, Array as _Array, Schedule, Data } from "effect";
 import * as Ogmios from "./internal/ogmios.js";

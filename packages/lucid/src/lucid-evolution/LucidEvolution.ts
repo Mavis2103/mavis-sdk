@@ -13,25 +13,25 @@ import {
   UTxO,
   Wallet,
   WalletApi,
-} from "@lucid-evolution/core-types";
+} from "@mavis-sdk/core-types";
 import { CML } from "../core.js";
 import { datumOf, metadataOf } from "./utils.js";
 import {
   createCostModels,
   PROTOCOL_PARAMETERS_DEFAULT,
   unixTimeToSlot,
-} from "@lucid-evolution/utils";
+} from "@mavis-sdk/utils";
 import * as TxBuilder from "../tx-builder/TxBuilder.js";
 import * as TxConfig from "../tx-builder/TxConfig.js";
 import * as TxSignBuilder from "../tx-sign-builder/TxSignBuilder.js";
-import { Data, SLOT_CONFIG_NETWORK } from "@lucid-evolution/plutus";
+import { Data, SLOT_CONFIG_NETWORK } from "@mavis-sdk/plutus";
 import {
   makeWalletFromAddress,
   makeWalletFromAPI,
   makeWalletFromPrivateKey,
   makeWalletFromSeed,
-} from "@lucid-evolution/wallet";
-import { Emulator } from "@lucid-evolution/provider";
+} from "@mavis-sdk/wallet";
+import { Emulator } from "@mavis-sdk/provider";
 import { Effect, pipe, Data as _Data } from "effect";
 import { NullableError, UnauthorizedNetwork } from "../Errors.js";
 import { TimeoutExceptionTypeId } from "effect/Cause";

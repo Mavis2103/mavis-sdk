@@ -1,4 +1,4 @@
-# @lucid-evolution/eslint-config
+# @mavis-sdk/eslint-config
 
 ## 0.2.4
 

@@ -3,7 +3,7 @@ import {
   PaymentKeyHash,
   RewardAddress,
   StakeKeyHash,
-} from "@lucid-evolution/core-types";
+} from "@mavis-sdk/core-types";
 import * as TxBuilder from "../TxBuilder.js";
 import { Effect, pipe } from "effect";
 import * as CML from "@anastasia-labs/cardano-multiplatform-lib-nodejs";

@@ -1,5 +1,5 @@
-import { fromHex } from "@lucid-evolution/core-utils";
-import { crc8 } from "@lucid-evolution/crc8";
+import { fromHex } from "@mavis-sdk/core-utils";
+import { crc8 } from "@mavis-sdk/crc8";
 
 export function toLabel(num: number): string {
   if (num < 0 || num > 65535) {

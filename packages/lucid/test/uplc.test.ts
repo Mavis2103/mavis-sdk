@@ -1,5 +1,5 @@
 import { assert, test } from "vitest";
-import * as UPLC from "@lucid-evolution/uplc";
+import * as UPLC from "@mavis-sdk/uplc";
 import * as CML from "@anastasia-labs/cardano-multiplatform-lib-nodejs";
 import {
   createCostModels,
@@ -7,9 +7,9 @@ import {
   PROTOCOL_PARAMETERS_DEFAULT,
   utxoToTransactionInput,
   utxoToTransactionOutput,
-} from "@lucid-evolution/utils";
-import { SLOT_CONFIG_NETWORK } from "@lucid-evolution/plutus";
-import { EvalRedeemer, UTxO } from "@lucid-evolution/core-types";
+} from "@mavis-sdk/utils";
+import { SLOT_CONFIG_NETWORK } from "@mavis-sdk/plutus";
+import { EvalRedeemer, UTxO } from "@mavis-sdk/core-types";
 
 // NOTE: This test should probably be moved to another location.
 // NOTE: UPLC.eval_phase_two_raw return a redeemer list which is the old format

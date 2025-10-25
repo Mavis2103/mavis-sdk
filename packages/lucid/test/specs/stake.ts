@@ -1,14 +1,14 @@
 import { Effect, pipe } from "effect";
 import { NetworkConfig, User } from "./services.js";
 import { handleSignSubmit, withLogRetry } from "./utils.js";
-import { Network } from "@lucid-evolution/core-types";
+import { Network } from "@mavis-sdk/core-types";
 import {
   scriptFromNative,
   unixTimeToSlot,
   paymentCredentialOf,
   validatorToRewardAddress,
-} from "@lucid-evolution/utils";
-import { Data } from "@lucid-evolution/plutus";
+} from "@mavis-sdk/utils";
+import { Data } from "@mavis-sdk/plutus";
 
 const mkSlotRangeStakePolicy = (address: string) => {
   return scriptFromNative({

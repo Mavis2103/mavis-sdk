@@ -1,12 +1,9 @@
-import {
-  paymentCredentialOf,
-  validatorToAddress,
-} from "@lucid-evolution/utils";
+import { paymentCredentialOf, validatorToAddress } from "@mavis-sdk/utils";
 import { Effect } from "effect";
 import { User } from "./services";
 import { handleSignSubmitWithoutValidation, withLogRetry } from "./utils";
-import { Data } from "@lucid-evolution/plutus";
-import { SpendingValidator } from "@lucid-evolution/core-types";
+import { Data } from "@mavis-sdk/plutus";
+import { SpendingValidator } from "@mavis-sdk/core-types";
 
 const alwaysSucceedScript: SpendingValidator = {
   type: "PlutusV2",

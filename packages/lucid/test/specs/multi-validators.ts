@@ -7,7 +7,7 @@ import {
   SimpleMintContract,
   NetworkConfig,
 } from "./services";
-import { Constr, Data } from "@lucid-evolution/plutus";
+import { Constr, Data } from "@mavis-sdk/plutus";
 import { fromText, RedeemerBuilder, UTxO } from "../../src";
 import { handleSignSubmit, withLogRetry } from "./utils";
 

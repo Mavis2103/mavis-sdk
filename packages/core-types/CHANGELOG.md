@@ -1,4 +1,4 @@
-# @lucid-evolution/core-types
+# @mavis-sdk/core-types
 
 ## 0.1.22
 

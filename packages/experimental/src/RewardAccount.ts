@@ -97,7 +97,7 @@ const equals = (a: RewardAccount, b: RewardAccount): boolean => {
  * Generate a random RewardAccount.
  *
  * @example
- * import { RewardAccount } from "@lucid-evolution/experimental";
+ * import { RewardAccount } from "@mavis-sdk/experimental";
  * import { FastCheck } from "effect";
  * import assert from "assert";
  *

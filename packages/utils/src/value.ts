@@ -1,5 +1,5 @@
-import { Assets, PolicyId, UTxO, Unit } from "@lucid-evolution/core-types";
-import { fromHex, fromText, toHex, toText } from "@lucid-evolution/core-utils";
+import { Assets, PolicyId, UTxO, Unit } from "@mavis-sdk/core-types";
+import { fromHex, fromText, toHex, toText } from "@mavis-sdk/core-utils";
 import { CML } from "./core.js";
 import { fromLabel, toLabel } from "./label.js";
 import { pipe } from "effect";

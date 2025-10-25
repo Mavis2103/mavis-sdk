@@ -16,14 +16,14 @@ import {
   TxHash,
   Unit,
   UTxO,
-} from "@lucid-evolution/core-types";
+} from "@mavis-sdk/core-types";
 import packageJson from "../package.json" with { type: "json" };
 import {
   applyDoubleCborEncoding,
   scriptFromNative,
   utxoToCore,
-} from "@lucid-evolution/utils";
-import { fromHex } from "@lucid-evolution/core-utils";
+} from "@mavis-sdk/utils";
+import { fromHex } from "@mavis-sdk/core-utils";
 
 export type MaestroSupportedNetworks = "Mainnet" | "Preprod" | "Preview";
 

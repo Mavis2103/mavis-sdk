@@ -23,7 +23,7 @@ As an ADA holder, you can participate in on-chain governance by delegating your 
 You can delegate your voting power to a trusted Delegated Representative (DRep). If you have a DRep ID (starts with `drep1...`), convert it to a Credential:
 
 ```typescript
-import { drepIDToCredential } from "@lucid-evolution/lucid";
+import { drepIDToCredential } from "@mavis-sdk/lucid";
 
 // Convert DRep ID to Credential
 const drepId = "drep1...";
@@ -102,7 +102,7 @@ await lucid
 Here's a complete example of delegating to a DRep:
 
 ```typescript
-import { Lucid, Blockfrost, drepIDToCredential } from "@lucid-evolution/lucid";
+import { Lucid, Blockfrost, drepIDToCredential } from "@mavis-sdk/lucid";
 
 // Initialize Lucid
 const lucid = await Lucid(

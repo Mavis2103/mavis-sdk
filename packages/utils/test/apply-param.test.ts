@@ -1,7 +1,7 @@
-import { Constr } from "@lucid-evolution/plutus";
+import { Constr } from "@mavis-sdk/plutus";
 import { applyParamsToScript, validatorToScriptHash } from "../src/scripts.js";
 import { assert, test } from "vitest";
-import { WithdrawalValidator } from "@lucid-evolution/core-types";
+import { WithdrawalValidator } from "@mavis-sdk/core-types";
 import { applyDoubleCborEncoding } from "../src/cbor.js";
 
 // Parametrized Contract Spec
