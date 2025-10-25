@@ -15,121 +15,6 @@
   <img alt="NPM Version" src="https://img.shields.io/npm/v/%40mavis-sdk%2Flucid?color=%2350C62A">
 </p>
 
-There are a growing number of projects that are built on top of `lucid-evolution`! If you've built a library or a project on top of lucid-evolution, tell me about it [on X](https://twitter.com/solidsnakedev) or [on Discord](https://discord.gg/s89P9gpEff) . I'll add it below and tweet it out.
-
-<h3 align="center">Powered by Mavis SDK</span></h1>
-
-<table align="center" style="justify-content: center;align-items: center;display: flex;">
-  <tr>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/37078161?s=200&v=4" height="50px;" alt="Cardano Foundation - IBC" />
-      <br />
-      <a style="text-decoration:none;" href="https://github.com/cardano-foundation/cardano-ibc-incubator" target="_blank">Cardano Foundation <br/> - IBC</a>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/36142236?s=200&v=4" height="50px;" alt="EMURGO Academy" />
-      <br />
-      <a style="text-decoration:none;" href="https://education.emurgo.io" target="_blank">EMURGO <br/> Academy</a>
-    </td>
-    <td align="center">
-      <img src="https://midgardprotocol.com/wp-content/uploads/2024/08/Logo-Midgard-White_Color.png" height="28px;" alt="Midgard Protocol" />
-      <br />
-      <a style="text-decoration:none;" href="https://midgardprotocol.com" target="_blank">Midgard Protocol</a>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/76267411?v=4" height="50px;" alt="Liqwid Finance" />
-      <br />
-      <a style="text-decoration:none;" href="https://liqwid.finance" target="_blank">Liqwid Finance</a>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/86611411?s=200&v=4" height="50px;" alt="Indigo Protocol" />
-      <br />
-      <a style="text-decoration:none;" href="https://indigoprotocol.io" target="_blank">Indigo Protocol</a>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/150360075?s=200&v=4"  height="50px;" alt="Splash" />
-      <br />
-      <a style="text-decoration:none;" href="https://www.splash.trade/"  target="_blank">Splash</a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/53253566?s=200&v=4" height="50px;" alt="Meld" />
-      <br />
-      <a style="text-decoration:none;" href="https://meld.com/"  target="_blank">Meld</a>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/84299480?v=4" height="50px;" alt="Maestro" />
-      <br />
-      <a style="text-decoration:none;" href="https://www.gomaestro.org" target="_blank">Maestro</a>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/131367296?s=200&v=4"  height="50px;" alt="Mynth" />
-      <br />
-      <a style="text-decoration:none;" href="https://mynth.ai/"  target="_blank">Mynth</a>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/159527663?s=200&v=4"  height="50px;" alt="Pondora" />
-      <br />
-      <a style="text-decoration:none;" href="https://pondora.org/"  target="_blank">Pondora</a>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/93930135?s=200&v=4" height="50px;" alt="WingRiders" />
-      <br />
-      <a style="text-decoration:none;" href="https://www.wingriders.com" target="_blank">WingRiders</a>
-    </td>
-      <td align="center">
-      <img src="https://ugc.production.linktr.ee/00f8a70f-e3ee-49e1-a4e0-e03607edd37d_Twitter-Avatar.jpeg?io=true&size=avatar-v3_0" height="50px;" alt="Atrium" />
-      <br />
-      <a style="text-decoration:none;" href="https://alpha.atrium.io/connect" target="_blank">Atrium</a>
-    </td>
-    <tr>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/86468066?s=200&v=4"  height="50px;" alt="Genius Yield" />
-      <br />
-      <a style="text-decoration:none;" href="https://www.geniusyield.co/"  target="_blank">Genius Yield</a>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/94472318?v=4" height="50px;" alt="VESPR Wallet" />
-      <br />
-      <a style="text-decoration:none;" href="https://vespr.xyz" target="_blank">VESPR Wallet</a>
-    </td>
-    <td align="center">
-      <img src="https://fetch.hosky.io/assets/images/fetch-white.png" height="28px;" alt="Fetch" />
-      <br />
-      <a style="text-decoration:none;" href="https://fetch.hosky.io/swap"  target="_blank">Fetch</a>
-    </td>
-        <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/171672240?s=200&v=4" height="50px;" alt="Strike Finance" />
-      <br />
-      <a style="text-decoration:none;" href="https://www.strikefinance.org" target="_blank">Strike Finance</a>
-    </td>
-    <td align="center">
-      <img src="https://summonplatform.io/wp-content/uploads/2022/07/Summon-Token-2048x2048.png" height="50px;" alt="Summon" />
-      <br />
-      <a style="text-decoration:none;" href="https://summonplatform.io/"  target="_blank">Summon</a>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/145890860?s=200&v=4" height="50px;" alt="GenWealth" />
-      <br />
-      <a style="text-decoration:none;" href="https://genwealth.app"  target="_blank">GenWealth</a>
-    </td>
-      <tr>
-    <td align="center">
-      <img src="https://preview.betttingada.com/assets/images/logo/logo-bead.png" height="50px;" alt="BetttingADA" />
-      <br />
-      <a style="text-decoration:none;" href="https://preview.betttingada.com"  target="_blank">BetttingADA</a>
-    </td>
-    <td align="center">
-      <img src="https://cardexscan.s3.us-east-1.amazonaws.com/cds_logo_vector_dark.png" height="50px;" alt="Summon" />
-      <br />
-      <a style="text-decoration:none;" href="https://cardexscan.com/home"  target="_blank">Cardexscan</a>
-    </td>
-    
-  </tr>
-</table>
-<br/>
-
 ---
 
 ## 📦 [Install](https://Mavis2103.github.io/mavis-sdk/install)
@@ -147,13 +32,10 @@ pnpm i @mavis-sdk/lucid
 ## 🚀 Quick Start
 
 ```typescript
-import { Lucid, Koios, generateSeedPhrase } from "@mavis-sdk/lucid";
+import { Lucid, Koios, generateSeedPhrase } from '@mavis-sdk/lucid';
 
 // Initialize Lucid with a provider
-const lucid = await Lucid(
-  new Koios("https://preprod.koios.rest/api/v1"),
-  "Preprod",
-);
+const lucid = await Lucid(new Koios('https://preprod.koios.rest/api/v1'), 'Preprod');
 
 const seedPhrase = generateSeedPhrase(); // BIP-39
 lucid.selectWallet.fromSeed(seedPhrase); // Select a wallet for signing
@@ -161,15 +43,42 @@ lucid.selectWallet.fromSeed(seedPhrase); // Select a wallet for signing
 // Build, sign and submit transaction
 const tx = await lucid
   .newTx()
-  .pay.ToAddress("addr_testa...", { lovelace: 5000000n }) // Pay 5 ADA to addr_testa...
-  .pay.ToAddress("addr_testb...", { lovelace: 5000000n }) // Pay 5 ADA to addr_testb...
+  .pay.ToAddress('addr_testa...', { lovelace: 5000000n }) // Pay 5 ADA to addr_testa...
+  .pay.ToAddress('addr_testb...', { lovelace: 5000000n }) // Pay 5 ADA to addr_testb...
   .complete(); // Balance the transaction and initiate UTxO selection
 
 const signedTx = await tx.sign.withWallet().complete();
 const txHash = await signedTx.submit();
 
-console.log("Transaction Submitted:", txHash);
+console.log('Transaction Submitted:', txHash);
 ```
+
+---
+
+## ✨ Features
+
+The `@mavis-sdk/lucid` package provides powerful transaction building capabilities for Cardano:
+
+### Transaction Building Functions
+
+- **Payments**: `pay.ToAddress()`, `pay.ToAddressWithData()`, `pay.ToContract()`
+- **Minting**: `mintAssets()`
+- **Staking**: `registerStake()`, `deRegisterStake()`, `withdraw()`, `delegateTo()`, `delegate.ToPool()`, `delegate.VoteToDRep()`
+- **Governance**: `register.DRep()`, `deregister.DRep()`, `addProposal()`, `updateDRep()`, `authCommitteeHot()`, `resignCommitteeHot()`
+- **Scripts & Data**: `attach.Script()`, `attach.SpendingValidator()`, `attach.MintingPolicy()`, `attachMetadata()`
+- **Inputs**: `readFrom()`, `collectFrom()`
+- **Timing**: `validFrom()`, `validTo()`
+- **Composition**: `compose()`, `setMinFee()`
+- **Completion**: `complete()`, `completeProgram()`, `completeSafe()`, `chain()`, `chainSafe()`
+  - Options:
+    - `coinSelection`: enable coin selection (default true)
+    - `changeAddress`: change output address
+    - `localUPLCEval`: enable local UPLC evaluation (default true)
+    - `setCollateral`: collateral amount (default 5_000_000n)
+    - `canonical`: use canonical ordering (default false)
+    - `includeLeftoverLovelaceAsFee`: include leftover ADA as fee (default false)
+    - `presetWalletInputs`: preset wallet UTxOs
+    - `logTransactionCBOR`: log transaction CBOR (default false)
 
 ---
 
@@ -180,15 +89,6 @@ For comprehensive documentation including API references, examples, and guides, 
 - 🔍 [Core Concepts](https://Mavis2103.github.io/mavis-sdk/documentation/core-concepts/instantiate-evolution)
 - 🧠 [Deep Dives](https://Mavis2103.github.io/mavis-sdk/documentation/deep-dives/pay-methods)
 - ⚙️ [Under the Hood](https://Mavis2103.github.io/mavis-sdk/documentation/under-the-hood)
-
-## 👥 Community and Support
-
-- [Discord Community](https://discord.gg/s89P9gpEff): Join for discussions, support, and updates
-- [GitHub Issues](https://github.com/Mavis2103/mavis-sdk/issues): Report bugs or request features
-
-## 🤝 Contributing
-
-We welcome contributions to Mavis SDK! Please check our [CONTRIBUTING.md](./CONTRIBUTING.md) guide for more information.
 
 ### Getting Started
 
