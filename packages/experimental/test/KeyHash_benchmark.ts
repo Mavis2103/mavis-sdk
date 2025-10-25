@@ -12,7 +12,7 @@ function formatOpsPerSec(n: number): string {
 
 const bench = new Bench({ time: 1000 });
 
-bench.add("Evolution 2.0 - KeyHash", () => {
+bench.add("Mavis 2.0 - KeyHash", () => {
   const maybeHex = "c37b1b5dc0669f1d3c61a6fddb2e8fde96be87b881c60bce8e8d542f";
   //FIX:
   // const a = Schema.decodeUnknownSync(KeyHash.Hash)(maybeHex);
@@ -29,7 +29,7 @@ bench.add("CML - Ed25519KeyHash", () => {
   const d = c.to_hex();
 });
 
-bench.add("Evolution 2.0 - KeyHash Effect ", () => {
+bench.add("Mavis 2.0 - KeyHash Effect ", () => {
   const hex = "c37b1b5dc0669f1d3c61a6fddb2e8fde96be87b881c60bce8e8d542f";
   //FIX:
   // pipe(

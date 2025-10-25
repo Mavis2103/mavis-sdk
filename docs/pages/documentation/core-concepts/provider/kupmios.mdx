@@ -10,22 +10,22 @@ import { Lucid, Kupmios } from "@mavis-sdk/lucid";
 const lucid = await Lucid(
   new Kupmios(
     "http://localhost:1442", // Kupo endpoint
-    "http://localhost:1337" // Ogmios endpoint
+    "http://localhost:1337", // Ogmios endpoint
   ),
-  "Preview"
+  "Preview",
 );
 ```
 
 <Callout type="info">
   **If you have API keys**
 
-  ```typescript
-  const lucid = await Lucid(
+```typescript
+const lucid = await Lucid(
   new Kupmios("http://localhost:1442", "http://localhost:1337", {
     kupoHeader: { "priv-api-key": "<kupo-api-key>" }, // for example: "dmtr-api-key": "<kupo-api-key>"
     ogmiosHeader: { "priv-api-key": "<ogmios-api-key>" },
   }),
-  "Preview"
+  "Preview",
 );
 ```
 

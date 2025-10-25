@@ -28,10 +28,7 @@ const blockfrostURL: string = process.env.BF_URL!;
  */
 const blockfrostPID: string = process.env.BF_PID!;
 
-const blockfrost: Provider = new Blockfrost(
-  blockfrostURL,
-  blockfrostPID,
-);
+const blockfrost: Provider = new Blockfrost(blockfrostURL, blockfrostPID);
 ```
 
 Other providers follow a similar pattern.

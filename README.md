@@ -32,10 +32,13 @@ pnpm i @mavis-sdk/lucid
 ## 🚀 Quick Start
 
 ```typescript
-import { Lucid, Koios, generateSeedPhrase } from '@mavis-sdk/lucid';
+import { Lucid, Koios, generateSeedPhrase } from "@mavis-sdk/lucid";
 
 // Initialize Lucid with a provider
-const lucid = await Lucid(new Koios('https://preprod.koios.rest/api/v1'), 'Preprod');
+const lucid = await Lucid(
+  new Koios("https://preprod.koios.rest/api/v1"),
+  "Preprod",
+);
 
 const seedPhrase = generateSeedPhrase(); // BIP-39
 lucid.selectWallet.fromSeed(seedPhrase); // Select a wallet for signing
@@ -43,14 +46,14 @@ lucid.selectWallet.fromSeed(seedPhrase); // Select a wallet for signing
 // Build, sign and submit transaction
 const tx = await lucid
   .newTx()
-  .pay.ToAddress('addr_testa...', { lovelace: 5000000n }) // Pay 5 ADA to addr_testa...
-  .pay.ToAddress('addr_testb...', { lovelace: 5000000n }) // Pay 5 ADA to addr_testb...
+  .pay.ToAddress("addr_testa...", { lovelace: 5000000n }) // Pay 5 ADA to addr_testa...
+  .pay.ToAddress("addr_testb...", { lovelace: 5000000n }) // Pay 5 ADA to addr_testb...
   .complete(); // Balance the transaction and initiate UTxO selection
 
 const signedTx = await tx.sign.withWallet().complete();
 const txHash = await signedTx.submit();
 
-console.log('Transaction Submitted:', txHash);
+console.log("Transaction Submitted:", txHash);
 ```
 
 ---

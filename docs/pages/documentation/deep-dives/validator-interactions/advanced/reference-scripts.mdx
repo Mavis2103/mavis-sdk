@@ -5,7 +5,6 @@ import { Callout, Steps, Tabs } from "nextra/components";
 Reference scripts point to an already on-chain script rather than including it entirely. Without reference scripts, the full script code must be included in each transaction.
 This reduces transaction size and base fee (execution costs remain the same).
 
-
 <Tabs items={['Deploy a Reference Script', 'Use a Reference Script']}>
   <Tabs.Tab>
     ```typescript
@@ -34,5 +33,6 @@ This reduces transaction size and base fee (execution costs remain the same).
       .readFrom([refScriptUTxO]) // Reference the script UTxO
       .complete();
     ```
+
   </Tabs.Tab>
 </Tabs>
