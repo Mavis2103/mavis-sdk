@@ -6,10 +6,10 @@ import {
   mintingPolicyToId,
   scriptFromNative,
   unixTimeToSlot,
-} from "@lucid-evolution/utils";
-import { fromText } from "@lucid-evolution/core-utils";
-import { Script } from "@lucid-evolution/core-types";
-import { Data } from "@lucid-evolution/plutus";
+} from "@mavis-sdk/utils";
+import { fromText } from "@mavis-sdk/core-utils";
+import { Script } from "@mavis-sdk/core-types";
+import { Data } from "@mavis-sdk/plutus";
 
 export const mintInSlotRange = (config: {
   mintingPolicy: Script;

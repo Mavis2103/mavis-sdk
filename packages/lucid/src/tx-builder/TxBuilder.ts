@@ -19,7 +19,7 @@ import {
   TxOutput,
   Unit,
   UTxO,
-} from "@lucid-evolution/core-types";
+} from "@mavis-sdk/core-types";
 import * as Collect from "./internal/Collect.js";
 import * as Read from "./internal/Read.js";
 import * as Attach from "./internal/Attach.js";
@@ -30,6 +30,7 @@ import * as Signer from "./internal/Signer.js";
 import * as Stake from "./internal/Stake.js";
 import * as Pool from "./internal/Pool.js";
 import * as Governance from "./internal/Governance.js";
+import * as Proposal from "./internal/Proposal.js";
 import * as Metadata from "./internal/Metadata.js";
 import * as CompleteTxBuilder from "./internal/CompleteTxBuilder.js";
 import * as TxSignBuilder from "../tx-sign-builder/TxSignBuilder.js";
@@ -37,7 +38,7 @@ import { TransactionError } from "../Errors.js";
 import { Either } from "effect/Either";
 import { Effect, Layer, pipe } from "effect";
 import { handleRedeemerBuilder } from "./internal/TxUtils.js";
-import { addAssets } from "@lucid-evolution/utils";
+import { addAssets } from "@mavis-sdk/utils";
 import { TxConfig } from "./internal/Service.js";
 
 export type TxBuilderConfig = {
@@ -134,6 +135,12 @@ export type TxBuilder = {
   };
   addSigner: (address: Address | RewardAddress) => TxBuilder;
   addSignerKey: (keyHash: PaymentKeyHash | StakeKeyHash) => TxBuilder;
+  addProposal: (
+    deposit: bigint,
+    rewardAddress: string,
+    govAction: CML.GovAction,
+    anchor: CML.Anchor,
+  ) => TxBuilder;
   /**
    * NOTE: Deprecate in future version
    */
@@ -362,6 +369,21 @@ export function makeTxBuilder(lucidConfig: LucidConfig): TxBuilder {
     },
     addSignerKey: (keyHash: PaymentKeyHash | StakeKeyHash) => {
       const program = Signer.addSignerKey(keyHash);
+      config.programs.push(program);
+      return txBuilder;
+    },
+    addProposal: (
+      deposit: bigint,
+      rewardAddress: string,
+      govAction: CML.GovAction,
+      anchor: CML.Anchor,
+    ) => {
+      const program = Proposal.addProposal(
+        deposit,
+        rewardAddress,
+        govAction,
+        anchor,
+      );
       config.programs.push(program);
       return txBuilder;
     },

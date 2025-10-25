@@ -1,4 +1,4 @@
-# @lucid-evolution/core-utils
+# @mavis-sdk/core-utils
 
 ## 0.1.16
 

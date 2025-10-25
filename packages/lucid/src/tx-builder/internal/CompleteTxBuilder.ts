@@ -13,7 +13,7 @@ import {
   EvalRedeemer,
   UTxO,
   Wallet,
-} from "@lucid-evolution/core-types";
+} from "@mavis-sdk/core-types";
 import {
   ERROR_MESSAGE,
   RunTimeError,
@@ -21,7 +21,7 @@ import {
   TxBuilderError,
 } from "../../Errors.js";
 import { CML } from "../../core.js";
-import * as UPLC from "@lucid-evolution/uplc";
+import * as UPLC from "@mavis-sdk/uplc";
 import * as TxBuilder from "../TxBuilder.js";
 import * as TxSignBuilder from "../../tx-sign-builder/TxSignBuilder.js";
 import {
@@ -35,8 +35,8 @@ import {
   utxoToTransactionInput,
   utxoToTransactionOutput,
   toCMLRedeemerTag,
-} from "@lucid-evolution/utils";
-import { SLOT_CONFIG_NETWORK } from "@lucid-evolution/plutus";
+} from "@mavis-sdk/utils";
+import { SLOT_CONFIG_NETWORK } from "@mavis-sdk/plutus";
 import { collectFromUTxO } from "./Collect.js";
 import { TxConfig } from "./Service.js";
 import { isError } from "effect/Predicate";
@@ -87,6 +87,12 @@ export type CompleteOptions = {
    * @default []
    */
   presetWalletInputs?: UTxO[];
+
+  /**
+   * Enable log CBOR not evaluate
+   * @default false
+   */
+  logTransactionCBOR?: boolean;
 };
 
 type CoinSelectionResult = {
@@ -111,6 +117,7 @@ export const complete = (options: CompleteOptions = {}) =>
       coinSelection = true,
       changeAddress = walletAddress,
       localUPLCEval = true,
+      logTransactionCBOR = false,
       setCollateral = 5_000_000n,
       canonical = false,
       includeLeftoverLovelaceAsFee = false,
@@ -138,6 +145,7 @@ export const complete = (options: CompleteOptions = {}) =>
       changeAddress,
       coinSelection,
       localUPLCEval,
+      logTransactionCBOR,
       includeLeftoverLovelaceAsFee,
       false,
     );
@@ -171,6 +179,7 @@ export const complete = (options: CompleteOptions = {}) =>
         changeAddress,
         coinSelection,
         localUPLCEval,
+        logTransactionCBOR,
         includeLeftoverLovelaceAsFee,
         true,
       );
@@ -221,6 +230,7 @@ export const selectionAndEvaluation = (
   changeAddress: string,
   coinSelection: boolean,
   localUPLCEval: boolean,
+  logTransactionCBOR: boolean,
   includeLeftoverLovelaceAsFee: boolean,
   script_calculation: boolean,
 ) =>
@@ -290,7 +300,12 @@ export const selectionAndEvaluation = (
     if (txRedeemerBuilder.draft_tx().witness_set().redeemers()) {
       if (localUPLCEval !== false) {
         applyUPLCEval(
-          yield* evalTransaction(config, txRedeemerBuilder, walletInputs),
+          yield* evalTransaction(
+            config,
+            txRedeemerBuilder,
+            walletInputs,
+            logTransactionCBOR,
+          ),
           config.txBuilder,
         );
       } else {
@@ -299,6 +314,7 @@ export const selectionAndEvaluation = (
             config,
             txRedeemerBuilder,
             walletInputs,
+            logTransactionCBOR,
           ),
           config.txBuilder,
         );
@@ -600,6 +616,7 @@ const evalTransactionProvider = (
   config: TxBuilder.TxBuilderConfig,
   txRedeemerBuilder: CML.TxRedeemerBuilder,
   walletInputs: UTxO[],
+  logTransactionCBOR: boolean,
 ): Effect.Effect<EvalRedeemer[], TxBuilderError> =>
   Effect.gen(function* () {
     const txEvaluation = setRedeemerstoZero(txRedeemerBuilder.draft_tx())!;
@@ -614,11 +631,15 @@ const evalTransactionProvider = (
       }),
     );
     const uplc_eval = yield* Effect.tryPromise({
-      try: () =>
-        config.lucidConfig.provider.evaluateTx(
+      try: () => {
+        if (logTransactionCBOR) {
+          console.log(txEvaluation.to_cbor_hex());
+        }
+        return config.lucidConfig.provider.evaluateTx(
           txEvaluation.to_cbor_hex(),
           txUtxos,
-        ),
+        );
+      },
       catch: (error) => completeTxError(error),
     });
     return uplc_eval;
@@ -628,6 +649,7 @@ const evalTransaction = (
   config: TxBuilder.TxBuilderConfig,
   txRedeemerBuilder: CML.TxRedeemerBuilder,
   walletInputs: UTxO[],
+  logTransactionCBOR: boolean,
 ): Effect.Effect<Uint8Array[], TxBuilderError> =>
   Effect.gen(function* () {
     const txEvaluation = setRedeemerstoZero(txRedeemerBuilder.draft_tx())!;
@@ -646,6 +668,9 @@ const evalTransaction = (
     const ins = txUtxos.map((utxo) => utxoToTransactionInput(utxo));
     const outs = txUtxos.map((utxo) => utxoToTransactionOutput(utxo));
     const slotConfig = SLOT_CONFIG_NETWORK[config.lucidConfig.network];
+    if (logTransactionCBOR) {
+      console.log(txEvaluation.to_cbor_hex());
+    }
     const uplc_eval: Uint8Array[] = yield* Effect.try({
       try: () =>
         UPLC.eval_phase_two_raw(

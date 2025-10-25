@@ -1,4 +1,4 @@
-# @lucid-evolution/experimental
+# @mavis-sdk/experimental
 
 ## 0.0.9
 

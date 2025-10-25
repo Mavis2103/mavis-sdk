@@ -3,7 +3,7 @@ import {
   PoolParams,
   Redeemer,
   RewardAddress,
-} from "@lucid-evolution/core-types";
+} from "@mavis-sdk/core-types";
 import { ERROR_MESSAGE, TxBuilderError } from "../../Errors.js";
 import * as TxBuilder from "../TxBuilder.js";
 import { Effect, pipe } from "effect";
@@ -17,7 +17,7 @@ import {
 } from "./TxUtils.js";
 import * as CML from "@anastasia-labs/cardano-multiplatform-lib-nodejs";
 import { LucidConfig } from "../../lucid-evolution/LucidEvolution.js";
-import { fromText } from "@lucid-evolution/core-utils";
+import { fromText } from "@mavis-sdk/core-utils";
 import { TxConfig } from "./Service.js";
 
 export const poolError = (cause: unknown) =>

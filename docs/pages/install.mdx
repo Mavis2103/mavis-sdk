@@ -1,60 +1,60 @@
 import { Callout, Steps, Cards, Tabs, FileTree } from "nextra/components";
 
-# Install Lucid Evolution
+# Install Mavis SDK
 
-Lucid Evolution is a powerful, modular framework for building Cardano applications off-chain. It provides developers with type-safe interfaces and utilities to interact with the Cardano blockchain, create transactions, and manage wallets without dealing with low-level complexities.
+Mavis SDK is a powerful, modular framework for building Cardano applications off-chain. It provides developers with type-safe interfaces and utilities to interact with the Cardano blockchain, create transactions, and manage wallets without dealing with low-level complexities.
 
 ## Prerequisites
 
-Before installing Lucid Evolution, ensure your environment meets the prerequisites:
+Before installing Mavis SDK, ensure your environment meets the prerequisites:
 
 - **Node.js**: Version 14 or higher
 - **Package Manager**: npm, yarn, pnpm, or bun
 
 ## Installation
 
-Choose your preferred package manager to install Lucid Evolution:
+Choose your preferred package manager to install Mavis SDK:
 
 <Tabs items={["pnpm", "npm", "yarn", "bun"]}>
   <Tabs.Tab>
   ```bash 
-  pnpm i @lucid-evolution/lucid 
+  pnpm i @mavis-sdk/lucid 
   ```
   </Tabs.Tab>
   <Tabs.Tab>
   ```bash 
-  npm i @lucid-evolution/lucid
+  npm i @mavis-sdk/lucid
   ```
   </Tabs.Tab>
   <Tabs.Tab>
   ```bash
-  yarn add @lucid-evolution/lucid 
+  yarn add @mavis-sdk/lucid 
   ```
   </Tabs.Tab>
   <Tabs.Tab>
   ```bash
-  bun i @lucid-evolution/lucid 
+  bun i @mavis-sdk/lucid 
   ```
   </Tabs.Tab>
 </Tabs>
 
 ## Package Structure
 
-Lucid Evolution uses a modular architecture to allow importing only what you need:
+Mavis SDK uses a modular architecture to allow importing only what you need:
 
 <FileTree>
-  <FileTree.Folder name="lucid-evolution" defaultOpen>
+  <FileTree.Folder name="mavis-sdk" defaultOpen>
     <FileTree.Folder name="packages" defaultOpen>
-      <FileTree.File name="lucid-evolution/lucid ⇀      Main package for Lucid Evolution" />
-      <FileTree.File name="lucid-evolution/bip39 ⇀      Package for BIP-39 mnemonic code" />
-      <FileTree.File name="lucid-evolution/core-types ⇀ Core types used across Lucid Evolution packages" />
-      <FileTree.File name="lucid-evolution/core-utils ⇀ Core utilities used across Lucid Evolution packages" />
-      <FileTree.File name="lucid-evolution/crc8 ⇀       Package for CRC8 calculation" />
-      <FileTree.File name="lucid-evolution/plutus ⇀     Package for Plutus integration" />
-      <FileTree.File name="lucid-evolution/provider ⇀   Package for providing data " />
-      <FileTree.File name="lucid-evolution/sign_data ⇀  Package for signing data" />
-      <FileTree.File name="lucid-evolution/utils ⇀      Utility functions for Lucid Evolution" />
-      <FileTree.File name="lucid-evolution/wallet ⇀     Wallet package for Lucid Evolution" />
+      <FileTree.File name="mavis-sdk/lucid ⇀      Main package for Mavis SDK" />
+      <FileTree.File name="mavis-sdk/bip39 ⇀      Package for BIP-39 mnemonic code" />
+      <FileTree.File name="mavis-sdk/core-types ⇀ Core types used across Mavis SDK packages" />
+      <FileTree.File name="mavis-sdk/core-utils ⇀ Core utilities used across Mavis SDK packages" />
+      <FileTree.File name="mavis-sdk/crc8 ⇀       Package for CRC8 calculation" />
+      <FileTree.File name="mavis-sdk/plutus ⇀     Package for Plutus integration" />
+      <FileTree.File name="mavis-sdk/provider ⇀   Package for providing data " />
+      <FileTree.File name="mavis-sdk/sign_data ⇀  Package for signing data" />
+      <FileTree.File name="mavis-sdk/utils ⇀      Utility functions for Mavis SDK" />
+      <FileTree.File name="mavis-sdk/wallet ⇀     Wallet package for Mavis SDK" />
     </FileTree.Folder>
   </FileTree.Folder>
 </FileTree>

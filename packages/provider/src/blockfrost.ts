@@ -1,9 +1,6 @@
 import { CML } from "./core.js";
-import { fromHex, sleep } from "@lucid-evolution/core-utils";
-import {
-  applyDoubleCborEncoding,
-  scriptFromNative,
-} from "@lucid-evolution/utils";
+import { fromHex, sleep } from "@mavis-sdk/core-utils";
+import { applyDoubleCborEncoding, scriptFromNative } from "@mavis-sdk/utils";
 import {
   Address,
   Credential,
@@ -20,7 +17,7 @@ import {
   TxHash,
   Unit,
   UTxO,
-} from "@lucid-evolution/core-types";
+} from "@mavis-sdk/core-types";
 import packageJson from "../package.json" with { type: "json" };
 import * as _Blockfrost from "./internal/blockfrost.js";
 

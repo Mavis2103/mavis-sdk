@@ -13,9 +13,9 @@ import {
   TxHash,
   Unit,
   UTxO,
-} from "@lucid-evolution/core-types";
-import { fromHex } from "@lucid-evolution/core-utils";
-import { fromUnit } from "@lucid-evolution/utils";
+} from "@mavis-sdk/core-types";
+import { fromHex } from "@mavis-sdk/core-utils";
+import { fromUnit } from "@mavis-sdk/utils";
 import * as _Koios from "./internal/koios.js";
 import * as _Ogmios from "./internal/ogmios.js";
 import { Data, Effect, pipe, Schedule, Schema as S } from "effect";

@@ -1,4 +1,4 @@
-# @lucid-evolution/uplc
+# @mavis-sdk/uplc
 
 ## 0.2.20
 

@@ -1,23 +1,22 @@
-import Image from "next/image";
-import { useRouter } from "next/router";
-import Script from "next/script";
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import Script from 'next/script';
 
 export default {
   project: {
-    link: "https://github.com/Anastasia-Labs/lucid-evolution",
+    link: 'https://github.com/Mavis2103/mavis-sdk'
   },
-  docsRepositoryBase:
-    "https://github.com/Anastasia-Labs/lucid-evolution/tree/main/docs",
+  docsRepositoryBase: 'https://github.com/Mavis2103/mavis-sdk/tree/main/docs',
 
   useNextSeoProps() {
     const { asPath } = useRouter();
-    if (asPath !== "/") {
+    if (asPath !== '/') {
       return {
-        titleTemplate: "%s | Lucid Evolution",
+        titleTemplate: '%s | Mavis SDK'
       };
     }
     return {
-      title: "Welcome",
+      title: 'Welcome'
     };
   },
 
@@ -25,63 +24,49 @@ export default {
   primarySaturation: 90,
   logo: () => (
     <>
-      <Image
-        src="/lucid-evolution/al-logo.png"
-        height="200"
-        width="200"
-        style={{ marginRight: "1em" }}
-        alt="Anastasia Labs Logo"
-      />
+      <Image src='/mavis-sdk/al-logo.png' height='200' width='200' style={{ marginRight: '1em' }} alt='Your Logo' />
     </>
   ),
   sidebar: {
     defaultMenuCollapseLevel: 1,
     toggleButton: true,
-    autoCollapse: true,
+    autoCollapse: true
   },
 
   search: {
-    placeholder: "🔎 Explore the Evolution",
+    placeholder: '🔎 Explore the Evolution'
   },
 
   toc: {
     float: true,
-    backToTop: true,
+    backToTop: true
   },
 
   chat: {
-    link: "https://discord.gg/s89P9gpEff",
+    link: 'https://discord.gg/s89P9gpEff'
   },
 
   gitTimestamp: () => null,
 
   navigation: {
     prev: true,
-    next: true,
+    next: true
   },
 
   feedback: {
-    content: "Give feedback on our docs →",
-    labels: "feedback",
+    content: 'Give feedback on our docs →',
+    labels: 'feedback'
   },
 
   editLink: {
-    text: "Contribute to this page →",
+    text: 'Contribute to this page →'
   },
 
   head: (
     <>
-      <link
-        rel="icon"
-        type="image/svg+xml"
-        sizes="any"
-        href="https://avatars.githubusercontent.com/u/125997902?s=200&v=4"
-      />
-      <meta
-        name="twitter:image"
-        content="https://anastasialabs.com/assets/img/logo/logo.png"
-      />
-      <meta name="twitter:site:domain" content="https://anastasialabs.com/" />
+      <link rel='icon' type='image/svg+xml' sizes='any' href='https://avatars.githubusercontent.com/u/125997902?s=200&v=4' />
+      <meta name='twitter:image' content='https://your-website.com/assets/img/logo/logo.png' />
+      <meta name='twitter:site:domain' content='https://your-website.com/' />
       <style>{`
         :root {
           color-scheme: dark;
@@ -142,56 +127,46 @@ export default {
       `}</style>
     </>
   ),
-  i18n: [{ locale: "en-US", text: "English" }],
+  i18n: [{ locale: 'en-US', text: 'English' }],
   footer: {
     component: (
       <>
         <footer>
-          <div className="container">
-            <div className="footer-content">
-              <div className="footer-section logo-section">
-                <img
-                  src="/lucid-evolution/al-logo.png"
-                  alt="Anastasia Labs Logo"
-                  className="footer-logo"
-                />
+          <div className='container'>
+            <div className='footer-content'>
+              <div className='footer-section logo-section'>
+                <img src='/mavis-sdk/al-logo.png' alt='Your Logo' className='footer-logo' />
               </div>
-              <div className="footer-links">
-                <div className="footer-section">
+              <div className='footer-links'>
+                <div className='footer-section'>
                   <h3>Quick Links</h3>
                   <ul>
                     <li>
-                      <a href="https://www.npmjs.com/package/@lucid-evolution/lucid">
-                        NPM Package
-                      </a>
+                      <a href='https://www.npmjs.com/package/@mavis-sdk/lucid'>NPM Package</a>
                     </li>
                     <li>
-                      <a href="https://anastasialabs.com">Anastasia Labs</a>
+                      <a href='https://your-website.com'>Your Project</a>
                     </li>
                   </ul>
                 </div>
-                <div className="footer-section">
+                <div className='footer-section'>
                   <h3>Community</h3>
                   <ul>
                     <li>
-                      <a href="https://discord.gg/s89P9gpEff">Discord ⤴</a>
+                      <a href='https://discord.gg/s89P9gpEff'>Discord ⤴</a>
                     </li>
                     <li>
-                      <a href="https://x.com/AnastasiaLabs">X ⤴</a>
+                      <a href='https://x.com/AnastasiaLabs'>X ⤴</a>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div className="footer-bottom">
+            <div className='footer-bottom'>
               <p>
-                MIT {new Date().getFullYear()} ©{" "}
-                <a
-                  href="https://anastasialabs.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Anastasia Labs
+                MIT {new Date().getFullYear()} ©{' '}
+                <a href='https://your-website.com' target='_blank' rel='noopener noreferrer'>
+                  Mavis
                 </a>
               </p>
             </div>
@@ -202,8 +177,7 @@ export default {
             background-color: #1a1515;
             color: #b0b0b0;
             padding: 2rem 0 1rem;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-              "Helvetica Neue", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
           }
           .container {
             max-width: 1000px;
@@ -293,10 +267,10 @@ export default {
           }
         `}</style>
       </>
-    ),
+    )
   },
   nextThemes: {
-    forcedTheme: "dark",
-    defaultTheme: "dark",
-  },
+    forcedTheme: 'dark',
+    defaultTheme: 'dark'
+  }
 };

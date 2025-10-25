@@ -1,10 +1,10 @@
-import { fromText } from "@lucid-evolution/core-utils";
+import { fromText } from "@mavis-sdk/core-utils";
 import {
   getAddressDetails,
   scriptFromNative,
   unixTimeToSlot,
   mintingPolicyToId,
-} from "@lucid-evolution/utils";
+} from "@mavis-sdk/utils";
 import { Effect, pipe } from "effect";
 import { HelloContract, NetworkConfig, User } from "./services";
 import {
@@ -12,7 +12,7 @@ import {
   handleSignSubmitWithoutValidation,
   withLogRetry,
 } from "./utils";
-import { Constr, Data } from "@lucid-evolution/plutus";
+import { Constr, Data } from "@mavis-sdk/plutus";
 import { DatumType } from "./hello-params";
 
 export const composeMintTx = Effect.gen(function* ($) {

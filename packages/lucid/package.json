@@ -1,17 +1,17 @@
 {
-  "name": "@lucid-evolution/lucid",
+  "name": "@mavis-sdk/lucid",
   "version": "0.4.29",
   "license": "MIT",
   "author": "",
   "description": "Next-generation transaction builder for highly scalable dApps on Cardano",
-  "homepage": "https://anastasia-labs.github.io/lucid-evolution",
+  "homepage": "https://Mavis2103.github.io/lucid-sdk",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Anastasia-Labs/lucid-evolution.git",
+    "url": "https://github.com/Mavis2103/lucid-sdk.git",
     "directory": "packages/lucid"
   },
   "bugs": {
-    "url": "https://github.com/Anastasia-Labs/lucid-evolution/issues"
+    "url": "https://github.com/Mavis2103/lucid-sdk/issues"
   },
   "tags": [
     "typescript",
@@ -57,14 +57,14 @@
     "@anastasia-labs/cardano-multiplatform-lib-nodejs": "6.0.2-3",
     "@effect/schema": "^0.66.16",
     "@emurgo/cardano-message-signing-nodejs": "^1.1.0",
-    "@lucid-evolution/core-types": "workspace:*",
-    "@lucid-evolution/core-utils": "workspace:*",
-    "@lucid-evolution/plutus": "workspace:*",
-    "@lucid-evolution/provider": "workspace:*",
-    "@lucid-evolution/sign_data": "workspace:*",
-    "@lucid-evolution/uplc": "workspace:*",
-    "@lucid-evolution/utils": "workspace:*",
-    "@lucid-evolution/wallet": "workspace:*",
+    "@mavis-sdk/core-types": "workspace:*",
+    "@mavis-sdk/core-utils": "workspace:*",
+    "@mavis-sdk/plutus": "workspace:*",
+    "@mavis-sdk/provider": "workspace:*",
+    "@mavis-sdk/sign_data": "workspace:*",
+    "@mavis-sdk/uplc": "workspace:*",
+    "@mavis-sdk/utils": "workspace:*",
+    "@mavis-sdk/wallet": "workspace:*",
     "effect": "^3.12.7"
   },
   "devDependencies": {

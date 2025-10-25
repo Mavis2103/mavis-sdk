@@ -1,4 +1,4 @@
-import { ProtocolParameters } from "@lucid-evolution/core-types";
+import { ProtocolParameters } from "@mavis-sdk/core-types";
 import { CML } from "../core.js";
 
 export const makeTxConfig = (

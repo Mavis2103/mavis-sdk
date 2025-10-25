@@ -1,8 +1,8 @@
-import { config } from "@lucid-evolution/eslint-config/base";
+import { config } from '@mavis-sdk/eslint-config/base';
 
 export default [
   ...config,
   {
-    ignores: ["test/**", "src/CML/**", "temp/**", "src/old/**", ".tsup/**/*"],
-  },
+    ignores: ['test/**', 'src/CML/**', 'temp/**', 'src/old/**', '.tsup/**/*']
+  }
 ];

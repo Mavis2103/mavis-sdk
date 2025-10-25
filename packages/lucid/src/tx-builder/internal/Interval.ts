@@ -1,7 +1,7 @@
 import { Effect } from "effect";
-import { UnixTime } from "@lucid-evolution/core-types";
+import { UnixTime } from "@mavis-sdk/core-types";
 import * as TxBuilder from "../TxBuilder.js";
-import { unixTimeToSlot } from "@lucid-evolution/utils";
+import { unixTimeToSlot } from "@mavis-sdk/utils";
 import { TxConfig } from "./Service.js";
 
 export const validFrom = (unixTime: UnixTime) =>

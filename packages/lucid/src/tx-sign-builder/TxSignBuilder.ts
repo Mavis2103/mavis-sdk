@@ -7,7 +7,7 @@ import {
   PrivateKey,
   TransactionWitnesses,
   Wallet,
-} from "@lucid-evolution/core-types";
+} from "@mavis-sdk/core-types";
 import { TransactionSignError } from "../Errors.js";
 import { TxSigned } from "../tx-submit/TxSubmit.js";
 import * as CompleteTxSigner from "./internal/CompleteTxSigner.js";
